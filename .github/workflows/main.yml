@@ -1,0 +1,17 @@
+name: deployment
+on: 
+  push:
+    branch:
+      - default
+jobs:
+  building:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build node-js file
+        run: npm install
+      - name: get code
+        uses: actions/checkout@v4
+      - name: download dependency
+        run: npm ci
+      - name: build package
+        run: npm run build
