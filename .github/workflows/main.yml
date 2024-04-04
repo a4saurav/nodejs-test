@@ -14,4 +14,4 @@ jobs:
       - name: download dependency
         run: npm ci
       - name: build package
-        run: npm run build
+        run: node index.js
