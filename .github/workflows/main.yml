@@ -7,8 +7,8 @@ jobs:
   building:
     runs-on: ubuntu-latest
     steps:
-      - name: build node-js file
-        run: npm install
+      - name: Use Node.js
+        uses: actions/setup-node@v4
       - name: get code
         uses: actions/checkout@v4
       - name: download dependency
